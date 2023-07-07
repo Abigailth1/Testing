@@ -23,7 +23,7 @@ struct ContentView: View {
                     .font(.title)
                     .foregroundColor(.white)
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.green)
                     .cornerRadius(10)
             }
         }
