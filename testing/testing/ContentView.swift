@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var labelText = "Hello World!"
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text(labelText)
+                .font(.largeTitle)
+                .padding()
+            
+            Button(action: {
+                labelText = "Button Pressed!"
+            }) {
+                Text("Press Me")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
         }
-        .padding()
     }
 }
 
